@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Knowledge-Based Q&A</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 18px;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        button {
+            width: 50%;
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #answer {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            white-space: pre-wrap;
+            max-width: 80%;
+            margin: 20px auto;
+            display: none;
+            text-align: left;
+        }
+        .success {
+            background-color: #e6ffe6;
+            border: 1px solid #66cc66;
+            color: #006600;
+        }
+        .error {
+            background-color: #ffe6e6;
+            border: 1px solid #cc6666;
+            color: #990000;
+        }
+        .suggestion {
+            background-color: #fffbe6;
+            border: 1px solid #e6b800;
+            color: #996600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💬 AI Knowledge-Based Q&A</h1>
+        <input type="text" id="question" placeholder="Ask me something..." autofocus>
+        <button onclick="askQuestion()">Ask</button>
+        <div id="answer" style="display:none;"></div>
+    </div>
+
+    <script>
+        async function askQuestion() {
+            const question = document.getElementById('question').value.trim();
+            if (!question) {
+                document.getElementById('answer').textContent = "❗ Please enter a valid question!";
+                document.getElementById('answer').className = 'error';
+                document.getElementById('answer').style.display = 'block';
+                return;
+            }
+
+            const response = await fetch('/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question })
+            });
+
+            const data = await response.json();
+            const answerBox = document.getElementById('answer');
+            answerBox.textContent = data.answer;
+            answerBox.className = data.status;
+            answerBox.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

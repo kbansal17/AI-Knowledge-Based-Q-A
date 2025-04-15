@@ -1,0 +1,83 @@
+[
+    {
+      "question": "What is AI?",
+      "answer": "AI stands for Artificial Intelligence. It is the simulation of human intelligence in machines."
+    },
+    {
+      "question": "What is machine learning?",
+      "answer": "Machine learning is a subset of AI that allows systems to learn and improve from experience without being explicitly programmed."
+    },
+    {
+      "question": "What is deep learning?",
+      "answer": "Deep learning is a subset of machine learning that uses neural networks with many layers to analyze complex data."
+    },
+    {
+      "question": "What is natural language processing?",
+      "answer": "Natural Language Processing (NLP) is a field of AI that focuses on the interaction between computers and human languages."
+    },
+    {
+      "question": "What is a neural network?",
+      "answer": "A neural network is a set of algorithms designed to recognize patterns, inspired by the structure of the human brain."
+    },
+    {
+      "question": "Who invented Python?",
+      "answer": "Python was created by Guido van Rossum and first released in 1991."
+    },
+    {
+      "question": "What is Python?",
+      "answer": "Python is a high-level, interpreted programming language known for its readability and ease of use."
+    },
+    {
+      "question": "What is Flask?",
+      "answer": "Flask is a micro web framework written in Python, used to build web applications."
+    },
+    {
+      "question": "What is an API?",
+      "answer": "API stands for Application Programming Interface. It allows different software systems to communicate with each other."
+    },
+    {
+      "question": "What is a database?",
+      "answer": "A database is an organized collection of structured data, typically stored electronically and accessed via a database management system."
+    },
+    {
+      "question": "What is Git?",
+      "answer": "Git is a distributed version control system used for tracking changes in source code during software development."
+    },
+    {
+      "question": "What is GitHub?",
+      "answer": "GitHub is a platform that hosts Git repositories and offers tools for collaborative software development."
+    },
+    {
+      "question": "What is HTML?",
+      "answer": "HTML stands for HyperText Markup Language. It is the standard language for creating web pages."
+    },
+    {
+      "question": "What is CSS?",
+      "answer": "CSS stands for Cascading Style Sheets. It is used to style and layout web pages."
+    },
+    {
+      "question": "What is JavaScript?",
+      "answer": "JavaScript is a programming language used to create interactive effects within web browsers."
+    },
+    {
+      "question": "What is a REST API?",
+      "answer": "A REST API is an application programming interface that conforms to the REST architectural style, using HTTP requests to access and manipulate data."
+    },
+    {
+      "question": "What is JSON?",
+      "answer": "JSON stands for JavaScript Object Notation. It is a lightweight data format used for storing and transporting data."
+    },
+    {
+      "question": "What is the Turing Test?",
+      "answer": "The Turing Test is a method for determining whether a machine exhibits intelligent behavior indistinguishable from a human."
+    },
+    {
+      "question": "What is computer vision?",
+      "answer": "Computer vision is a field of AI that enables computers to interpret and process visual information from the world."
+    },
+    {
+      "question": "What is cloud computing?",
+      "answer": "Cloud computing is the delivery of computing services—like storage, databases, and software—over the internet."
+    }
+  ]
+  
