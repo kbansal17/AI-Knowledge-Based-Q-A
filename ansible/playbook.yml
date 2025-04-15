@@ -1,0 +1,40 @@
+---
+- name: Deploy AI Knowledge Q&A Flask App Locally
+  hosts: web
+  become: true
+
+  tasks:
+    - name: Install Python and pip
+      apt:
+        name: ['python3', 'python3-pip', 'git']
+        state: present
+        update_cache: yes
+
+    - name: Clone the GitHub repo
+      git:
+        repo: https://github.com/kbansal17/AI-Knowledge-Based-Q-A.git
+        dest: /home/khushi/qa_app
+        version: master
+        force: yes
+
+    - name: Install Python requirements
+      pip:
+        requirements: /home/khushi/qa_app/requirements.txt
+        executable: pip3
+
+    - name: Run the Flask app
+      shell: nohup python3 /home/khushi/qa_app/app.py &
+      args:
+        chdir: /home/khushi/qa_app
+
+    - name: Start the Flask app in the background
+      shell: nohup python /home/khushi/qa_app/app.py &>/dev/null &
+      args:
+        chdir: /home/khushi/qa_app
+    - name: Run the Flask app
+      become: true
+      shell: nohup python3 /home/khushi/qa_app/app.py > /home/khushi/qa_app/flask.log 2>&1 &
+      args:
+        executable: /bin/bash
+
+
