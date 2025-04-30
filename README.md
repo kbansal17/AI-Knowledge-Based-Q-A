@@ -109,18 +109,3 @@ Need help? Just ask!
 4. Push and create a PR (`git push origin new-feature`)
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgements
-
-- Flask – Python micro web framework
-- Ansible – Automation engine
-- OpenAI – Inspiration for building AI tools
-```
-
-Let me know if you’d like to include a project diagram or badge-style project summary.
