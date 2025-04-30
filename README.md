@@ -1,6 +1,3 @@
-Sure! Here's the complete **`README.md`** file as a single code block — you can copy and paste it directly into your project:
-
-```markdown
 # AI Knowledge-Based Q&A System (Automated with Ansible)
 
 This project is an AI-powered Knowledge-Based Question and Answer (Q&A) system that uses Natural Language Processing (NLP) to answer user questions based on a custom knowledge base. It includes an Ansible playbook to automate the local deployment of the Flask web application.
